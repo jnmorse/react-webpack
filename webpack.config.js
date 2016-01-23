@@ -1,5 +1,4 @@
 var autoprefixer = require('autoprefixer');
-var precss = require('precss');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
