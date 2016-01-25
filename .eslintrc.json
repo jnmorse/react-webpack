@@ -33,7 +33,6 @@
         ],
         "no-console": [1]
     },
-    "extends": "eslint:recommended",
     "ecmaFeatures": {
       "jsx": true,
       "modules": true
