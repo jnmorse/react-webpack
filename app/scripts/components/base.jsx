@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { createClass } from 'react';
 
-export default class Base extends Component {
-  render() {
+var Base = createClass({
+  render: function () {
     return (
       <header><h1>Hello World</h1></header>
     );
   }
-}
+});
+
+module.exports = Base;
