@@ -8,25 +8,17 @@ var app = path.join(__dirname, 'app');
 module.exports = {
   entry: {
     app: [
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
+      'webpack-hot-middleware/client',
       './app/scripts/main'
     ],
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/dist',
-    filename: './[name].js',
-    chunkFilename: './[id].js'
+    filename: '[name].js',
+    publicPath: '/'
   },
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loader: 'source-map-loader'
-      }
-    ],
     loaders: [
       {
         test: /\.scss$/,
@@ -35,7 +27,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel']
+        loaders: ['babel']
 
       },
       {
