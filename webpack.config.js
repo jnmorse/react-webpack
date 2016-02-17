@@ -9,44 +9,35 @@ module.exports = {
   entry: {
     app: [
       'webpack-hot-middleware/client',
-      './app/scripts/main'
+      path.join(__dirname, 'app', 'scripts', 'main')
     ],
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
-    publicPath: '/'
+    filename: '[name].js'
+    // publicPath: 'http://localhost:3000/'
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
   module: {
     loaders: [
       {
-        test: /\.scss$/,
-        loader: 'style!css!postcss!sass'
-      },
-      {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /server.js/],
         loaders: ['babel']
-
-      },
-      {
-        test: /\.html$/,
-        loader: 'file?name=[name].[ext]'
       }
     ]
   },
-  sassLoader: {
-    includePaths: [path.join(__dirname, 'bower_components')]
-  },
-  postcss: function () {
-    return {
-      defaults: [autoprefixer],
-      cleaner: [autoprefixer({ browsers: []})]
-    };
+  resolve: {
+    extensions: ['', '.js', ',jsx']
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin(['app', 'vendor'], 'js/[name].js'),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
+  devServer: {
+    hot: true,
+    proxy: {
+      '*': 'http://localhost:3000'
+    }
+  }
 };

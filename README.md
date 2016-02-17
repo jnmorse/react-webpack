@@ -12,7 +12,7 @@ Any contributions will be welcome.
 
 -   install needed packages by running `npm install`.
 
--   To start the dev server run `npm run serve`.
+-   To start the server run `npm start`.
 
 -   To build production files use `npm run build`.
 
