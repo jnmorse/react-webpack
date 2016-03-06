@@ -1,11 +1,18 @@
 import { combineReducers } from 'redux';
+import { SITE_LOADED } from '../constants';
 
-function baseReducer (state, action) {
-  return state;
+function siteReducer(state = {}, action) {
+  switch (action.type) {
+  case SITE_LOADED:
+    console.log('Site Loaded');
+    return state;
+  default:
+    return state;
+  }
 }
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  site: siteReducer
 });
 
 export default rootReducer;

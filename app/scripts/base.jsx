@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
+import { siteLoaded } from './actions';
+import { connect } from 'react-redux';
 import { Header } from './elements/html5';
 
-export default class Base extends Component {
-  render () {
+class Base extends Component {
+  componentDidMount() {
+    this.props.siteLoaded();
+  }
+
+  render() {
     return (
       <div>
-        <Header className="container-fluid" title="React" subtitle="Webpack"/>
-        <i style={{fontSize:30}} className="glyphicon glyphicon-leaf"></i>
+        <Header className="container-fluid" subtitle="Webpack" title="React"/>
       </div>
     );
   }
 }
+
+Base.propTypes = {
+  siteLoaded: React.PropTypes.func
+};
+
+export default connect(null, { siteLoaded })(Base);
