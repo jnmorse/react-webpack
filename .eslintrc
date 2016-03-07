@@ -1,9 +1,11 @@
 {
   "env": {
     "browser": true,
+    "es6": true,
     "mocha": true,
     "node": true
   },
+  "parser": "babel-eslint",
   "globals": {
     "$": true,
     "ga": true,
@@ -12,16 +14,17 @@
     "window": true,
     "Promise": true
   },
-  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
       "jsx": true
     },
     "ecmaVersion": 6,
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "html"
   ],
   "rules": {
     "block-scoped-var": 0,
@@ -57,6 +60,7 @@
     "func-style": 0,
     "guard-for-in": 1,
     "handle-callback-err": 2,
+    "indent": [2, 2],
     "jsx-quotes": [
       2,
       "prefer-double"

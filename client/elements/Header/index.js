@@ -6,13 +6,15 @@ export const Header = (props) => {
 
   return (
     <header className={className} style={style}>
-      <h1 className='col-xs-12'>
+      <h1 className="col-xs-12">
         <span>{title}</span>
         <SubTitle title={subtitle} />
       </h1>
     </header>
   );
 };
+
+Header.displayName = 'Header';
 
 Header.propTypes = {
   className: React.PropTypes.string,
