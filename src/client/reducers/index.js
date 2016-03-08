@@ -4,7 +4,6 @@ import { SITE_LOADED } from '../constants';
 function siteReducer(state = {}, action) {
   switch (action.type) {
   case SITE_LOADED:
-    console.log('Site Loaded');
     return state;
   default:
     return state;

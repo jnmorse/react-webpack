@@ -10,6 +10,10 @@ app.disable('x-powered-by');
 app.set('port', PORT);
 app.use(express.static(path.join(__dirname, '..', 'app')));
 
+app.get('/cities', function(req, res) {
+  res.status(404).json('Error');
+});
+
 // Only server index.html to the browser
 app.get('*', function response(req, res) {
   res.sendFile(path.join(__dirname, '../app/index.html'));
@@ -18,7 +22,7 @@ app.get('*', function response(req, res) {
 module.exports = app;
 
 if (require.main === module) {
-  app.listen(PORT, 'localhost', function(err) {
+  app.listen(PORT, function(err) {
     if (err) {
       stream.write(`Error: ${err}`);
     }

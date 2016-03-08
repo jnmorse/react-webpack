@@ -1,5 +1,3 @@
-require('babel-core/register');
-
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import webpack from './build/webpack';
@@ -7,7 +5,7 @@ import webpack from './build/webpack';
 // const stream = process.stdout;
 
 gulp.task('lint', () => {
-  return gulp.src(['client/**/**.js', 'server/**/**.js'])
+  return gulp.src(['server/**/**.js', 'src/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
