@@ -1,0 +1,15 @@
+@import 'vars';
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 100%;
+}
+
+* {
+  line-height: 1.5em;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+}

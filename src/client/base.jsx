@@ -22,4 +22,6 @@ Base.propTypes = {
   siteLoaded: React.PropTypes.func
 };
 
+Base.displayName = 'Base';
+
 export default connect(null, { siteLoaded })(Base);

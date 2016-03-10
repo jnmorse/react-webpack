@@ -24,6 +24,11 @@ module.exports = {
     extensions: ['', '.js', ',jsx']
   },
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ]
 };

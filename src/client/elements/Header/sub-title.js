@@ -6,6 +6,8 @@ export const SubTitle = (props) => {
   return <small>{title}</small>;
 };
 
+SubTitle.displayName = 'SubTitle';
+
 SubTitle.propTypes = {
   title: React.PropTypes.string
 };
