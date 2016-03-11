@@ -3,6 +3,7 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import path from 'path';
 import plumber from 'gulp-plumber';
+import { stream } from 'browser-sync';
 import webpack from 'webpack-stream';
 import webpackConfig from '../webpack.gulp';
 import uglify from 'gulp-uglify';
@@ -16,5 +17,6 @@ export default function() {
     .pipe(plumber({ errorHandler }))
     .pipe(webpack({...webpackConfig, devtool: 'inline-source-map'}))
     .pipe(DEV ? gutil.noop() : uglify())
-    .pipe(gulp.dest(path.join(BASE, 'app', 'js')));
+    .pipe(gulp.dest(path.join(BASE, 'app', 'js')))
+    .pipe(stream({match: 'js/client.js'}));
 }

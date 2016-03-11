@@ -12,7 +12,7 @@ class Base extends Component {
     return (
       <div>
         <Header className="container-fluid" subtitle="Webpack" title="React"/>
-        <p>Time to write some code.</p>
+        <p>Time to write some code, and chew bubblegum. Only I'm all out of gum.</p>
       </div>
     );
   }
