@@ -7,6 +7,7 @@ import fm from 'postcss-font-magician';
 import postcss from 'gulp-postcss';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
+import { stream } from 'browser-sync';
 
 export default function() {
   return gulp.src(path.resolve(__dirname, '../src/styles/**/*.scss'))
@@ -17,5 +18,6 @@ export default function() {
     ))
     // .pipe(cssnano())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.join(__dirname, '..', 'app', 'css')));
+    .pipe(gulp.dest(path.join(__dirname, '..', 'app', 'css')))
+    .pipe(stream({match: '**/*.css'}));
 }
