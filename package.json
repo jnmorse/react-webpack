@@ -20,7 +20,7 @@
   "main": "webpack.config.js",
   "private": true,
   "scripts": {
-    "start": "node server",
+    "start": "gulp sync",
     "build": "gulp build",
     "production": "NODE_ENV='production' gulp build",
     "test": "mocha --recursive --compilers js:babel-core/register"
