@@ -21,10 +21,12 @@ describe('Base Component', function() {
 
   });
 
-  it('Should say, "Time to write some code."', function() {
+  it('Should say, "Time to write some code, and chew bubblegum. Only I\'m all '
+    + 'out of gum."', function() {
 
-    expect(this.divTest.textContent).equal('Time to write some code.');
-
+    expect(this.divTest.textContent)
+      .equal('Time to write some code, and chew bubblegum. '
+        + 'Only I\'m all out of gum.');
   });
 
 });
