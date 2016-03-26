@@ -26,14 +26,15 @@ making one.
 2. Make your commit messages using a short descriptive title, preferably in
    "Title Case".
 3. Add a longer description after the title that describes the changes being
-   implementated.
+   implemented.
 5. Make your pull request against the staging branch
 
 If then everything is working it will be merged into the master branch.
 
 ## Linting Setup
 
-You should have [ESLint running in your editor][1], and it will hightlight anything
-that doesn't conform with the linting rules that I have setup for this repo.
+You should have [ESLint running in your editor][1], and it will highlight
+anything that doesn't conform with the linting rules that I have setup for this
+repository.
 
 [1]: http://eslint.org/docs/user-guide/integrations.html "Eslint"

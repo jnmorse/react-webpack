@@ -16,8 +16,8 @@ export default function() {
     .pipe(postcss(
       [fm(), autoprefixer({ browsers: ['last 2 versions'] })]
     ))
-    // .pipe(cssnano())
+    .pipe(cssnano())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.join(__dirname, '..', 'app', 'css')))
+    .pipe(gulp.dest(path.join(__dirname, '..', 'dist', 'css')))
     .pipe(stream({match: '**/*.css'}));
 }

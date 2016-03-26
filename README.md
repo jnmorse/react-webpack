@@ -1,33 +1,55 @@
 # React Webpack Starter
 
+1. [Author](#author)
+2. [How To Get Started](#how-to-get-started)
+- [Prerequisites](#prerequisites)
+- [Install Locally](#install-locally)
+- [Build For Production](#build-for-production)
+
 My Own attempt to create a starting point for react projects.  Will attempt to
 improve as I get more accustomed to work with these tools.
 
 Any contributions will be welcome.
 
-## How To Use
-
--   First will need to clone the repository.
-    `git clone https://github.com/jnmorse/react-webpack.git`
--   install needed packages by running `npm install`.
--   To start the server run `gulp sync`.
--   To build production files use `gulp`.
-
 ## Author
 
 Joseph Morse <mailto:tamed.lionheart@gmail.com>
 
-## Contributers
+## How To Get Started
 
-Add Your Name Here
+Follow these directions to get started.
+
+### Prerequisites
+
+You will need to have Node.js installed.
+
+### Installing Locally
+
+Linux / Mac OS
+
+```sh
+git clone https://github.com/jnmorse/react-webpack.git
+npm install
+cp sample.env .env
+npm start
+```
+
+You may also download a zipped version of the repository and extract it.
+
+### Build For Production
+
+To use in production change NODE_ENV in the `.env` file to production.
+
+```sh
+npm run build:dist
+npm start
+```
 
 ## Want to Contribute?
 
 Read our [Contributing Guide][1]
 
-## License
-
-2016 [MIT](LICENSE); Joseph Morse
+## [License](LICENSE)
 
 > The MIT License (MIT)
 

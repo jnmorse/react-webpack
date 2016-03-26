@@ -1,49 +1,66 @@
 import gulp from 'gulp';
-import lintjs from './build/lintjs';
+import path from 'path';
+
+import lintjs from './gulp-tasks/lintjs';
 import nodemon from 'gulp-nodemon';
-import webpack from './build/webpack';
-import sass from './build/sass';
-import sync, { reload } from 'browser-sync';
+import webpack from './gulp-tasks/webpack';
+import sass from './gulp-tasks/sass';
+
+import sync, { stream, reload } from 'browser-sync';
 
 // Lint Javascript Files
 gulp.task('lint', lintjs);
 
 // Build Sass Files
-gulp.task('sass', sass);
+gulp.task('sass', () => sass().pipe(stream({match: 'css/main.css'})));
 
 // Server Files
-gulp.task('serve', () => {
+gulp.task('nodemon', (cb) => {
+  let called = false;
+
   nodemon({
-    script: 'server',
+    script: 'index',
     ext: 'js html',
-    env: { 'NODE_ENV': 'development' },
     ignore: ['app', 'node_modules', 'client']
+  })
+
+  .on('start', function() {
+    if (called === false) {
+      called = true;
+      cb();
+    }
+  })
+
+  .on('restart', function() {
+    setTimeout(function() {
+      reload({ stream: false });
+    }, 1500);
   });
 });
 
 // Watch for changes
 gulp.task('watch', () => {
   gulp.watch('src/styles/**/*.scss', ['sass']);
-  gulp.watch('src/client/**/*.js', ['client']);
 });
 
 // browser sync
-gulp.task('sync', ['sass', 'client', 'serve', 'watch'], () => {
+gulp.task('serve', ['sass', 'nodemon'], () => {
   sync.init(null, {
-    proxy: 'http://localhost:3000',
+    proxy: 'http://localhost:5000',
     logLevel: 'debug',
-    files: ['src/**/*'],
-    port: 3001,
+    port: 8080,
     open: false,
     reloadDelay: 1000
   });
+
+  gulp.watch(path.resolve(__dirname, 'src/styles/**/*.css'), ['sass']);
 });
 
 // Client Scripts Task
-gulp.task('client', webpack);
+gulp.task('webpack', webpack);
 
 // Build Task
-gulp.task('build', ['lint', 'sass', 'client']);
+gulp.task('build', ['lint', 'sass', 'webpack']);
 
 // Default Taks
 gulp.task('default', ['build']);
