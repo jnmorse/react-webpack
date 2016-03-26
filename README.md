@@ -2,9 +2,9 @@
 
 1. [Author](#author)
 2. [How To Get Started](#how-to-get-started)
-- [Prerequisites](#prerequisites)
-- [Install Locally](#install-locally)
-- [Build For Production](#build-for-production)
+    - [Prerequisites](#prerequisites)
+    - [Install Locally](#install-locally)
+    - [Build For Production](#build-for-production)
 
 My Own attempt to create a starting point for react projects.  Will attempt to
 improve as I get more accustomed to work with these tools.
@@ -31,7 +31,7 @@ Linux / Mac OS
 git clone https://github.com/jnmorse/react-webpack.git
 npm install
 cp sample.env .env
-npm start
+npm run serve
 ```
 
 You may also download a zipped version of the repository and extract it.
@@ -41,8 +41,7 @@ You may also download a zipped version of the repository and extract it.
 To use in production change NODE_ENV in the `.env` file to production.
 
 ```sh
-npm run build:dist
-npm start
+npm run build
 ```
 
 ## Want to Contribute?
