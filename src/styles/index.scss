@@ -1,0 +1,19 @@
+@import 'vars';
+
+// @import 'bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
+$icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 100%;
+}
+
+* {
+  line-height: 1.5em;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+}

@@ -220,7 +220,7 @@
     "react/wrap-multilines": 1,
     "semi": [
       2,
-      "always"
+      "never"
     ],
     "semi-spacing": [
       2,

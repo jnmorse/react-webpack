@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 export const SubTitle = (props) => {
-  const { title } = props;
+  const { title } = props
 
-  return <small>{title}</small>;
-};
+  return <small>{title}</small>
+}
 
-SubTitle.displayName = 'SubTitle';
+SubTitle.displayName = 'SubTitle'
 
 SubTitle.propTypes = {
   title: React.PropTypes.string
-};
+}
