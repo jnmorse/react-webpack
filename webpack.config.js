@@ -16,7 +16,7 @@ require('dotenv').config()
 module.exports = {
   entry: {
     main: [
-      'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+      'webpack-hot-middleware/client',
       path.resolve(__dirname, 'src/client'),
       path.resolve(__dirname, 'src/styles')
     ]
