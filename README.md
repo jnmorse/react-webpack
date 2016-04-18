@@ -30,6 +30,7 @@ Linux / Mac OS
 ```sh
 git clone https://github.com/jnmorse/react-webpack.git
 npm install
+npm run bower
 cp sample.env .env
 npm run serve
 ```

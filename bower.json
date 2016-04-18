@@ -1,0 +1,35 @@
+{
+  "name": "react-webpack",
+  "description": "React with Webpack",
+  "main": "server/index.js",
+  "authors": [
+    "Joseph Morse <tamed.lionheart@gmail.com> (https://github.com/jnmorse)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "babel",
+    "bower",
+    "boilerplate",
+    "edit",
+    "express",
+    "hot",
+    "live",
+    "react",
+    "react-redux",
+    "redux",
+    "sass",
+    "webpack"
+  ],
+  "homepage": "https://github.com/jnmorse/react-webpack",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}

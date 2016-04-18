@@ -24,6 +24,7 @@
   "scripts": {
     "start": "node index.js",
     "serve": "nodemon index.js",
+    "bower": "bower install",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-core/register"
   },
