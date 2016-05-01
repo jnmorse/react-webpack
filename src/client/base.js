@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { siteLoaded } from './actions'
 import { connect } from 'react-redux'
-import { Header } from './elements/Header'
+import { Header } from './components/Header'
 
 class Base extends Component {
   componentDidMount() {

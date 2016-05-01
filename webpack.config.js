@@ -3,11 +3,6 @@ var path = require('path')
 
 // PostCSS
 var autoprefixer = require('autoprefixer')
-var fontMagician = require('postcss-font-magician')
-
-// Extract sass files to css files
-var extractTextPlugin = require('extract-text-webpack-plugin')
-var extractSass = new extractTextPlugin('css/[name].css')
 
 var htmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -16,7 +11,8 @@ require('dotenv').config()
 module.exports = {
   entry: {
     main: [
-      'webpack-hot-middleware/client',
+      'webpack-hot-middleware/client?path=/__webpack_hmr',
+      'webpack/hot/dev-server',
       path.resolve(__dirname, 'src/client'),
       path.resolve(__dirname, 'src/styles')
     ]
@@ -37,23 +33,24 @@ module.exports = {
         exclude: [/node_modules/, /server/, /test/],
         loader: 'babel',
         query: {
-          presets: ['react-hmre']
+          presets: [process.env.NODE_ENV === 'development' && 'react-hmre']
         }
       },
 
       {
         test: /\.scss|\.sass$/,
         exclude: /node_modules/,
-        loader: extractSass.extract([
-          'css?sourceMap',
-          'postcss?sourceMap',
-          'sass?sourceMap'
-        ])
+        loaders: [
+          'style',
+          'css',
+          'postcss',
+          'sass'
+        ]
       },
 
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /src\/fonts/],
         loaders: [
           'file?hash=sha512&digest=hex&name=images/[name].[ext]',
           'image-webpack?{progressive:true, optimizationLevel: 7, '
@@ -62,8 +59,9 @@ module.exports = {
       },
 
       {
-        test: /\.((woff2?|svg)(\?v=\d+\.\d+\.\d+))|(woff2?|svg|jpe?g|png|gif|ico)$/,
-        loader: 'url?name=fonts/[name].[ext]&prefix=fonts/&limit=10000'
+        test: /\.((woff2?|svg)(\?v=\d+\.\d+\.\d+))?$|(woff2?|svg|jpe?g|png|gif|ico)$/,
+        exclude: /src\/images/,
+        loader: 'url?name=fonts/[name].[ext]&limit=10000'
       },
 
       {
@@ -80,12 +78,10 @@ module.exports = {
   },
   postcss: function() {
     return [
-      autoprefixer({ browsers: ['last 2 versions'] }),
-      fontMagician
+      autoprefixer({ browsers: ['last 2 versions'] })
     ]
   },
   plugins: [
-    extractSass,
     new htmlWebpackPlugin({
       hash: true,
       inject: true,

@@ -5,14 +5,7 @@
     "mocha": true,
     "node": true
   },
-  "parser": "babel-eslint",
   "globals": {
-    "$": true,
-    "ga": true,
-    "jQuery": true,
-    "router": true,
-    "window": true,
-    "Promise": true
   },
   "parserOptions": {
     "ecmaFeatures": {

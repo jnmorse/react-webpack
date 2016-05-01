@@ -1,8 +1,8 @@
 @import 'vars';
 
 // @import 'bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
-$icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
-@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 :root {
   font-family: Roboto, sans-serif;
@@ -16,4 +16,10 @@ $icon-font-path: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/'
 body {
   background-color: $white;
   color: $black;
+}
+
+header {
+  small {
+    margin-left: 0.5em;
+  }
 }
