@@ -20,11 +20,6 @@ if (dev) {
 
   app.use(require('webpack-hot-middleware')(compiler))
 
-  app.get('/', function(req, res, next) {
-    res.status(200)
-    next()
-  })
-
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../index.html'))
   })
