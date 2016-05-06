@@ -12,7 +12,6 @@ module.exports = {
   entry: {
     main: [
       'webpack-hot-middleware/client?path=/__webpack_hmr',
-      'webpack/hot/dev-server',
       path.resolve(__dirname, 'src/client'),
       path.resolve(__dirname, 'src/styles')
     ]
