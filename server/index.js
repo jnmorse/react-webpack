@@ -1,17 +1,20 @@
-var path = require('path')
-var express = require('express')
-var webpack = require('webpack')
-var config = require('../webpack.config')
+const path = require('path')
+const express = require('express')
+const webpack = require('webpack')
+const config = require('../webpack.config')
+const history = require('connect-history-api-fallback')
 
 require('dotenv').config()
 
-var app = express()
+const app = express()
 app.disable('x-powered-by')
 
-var dev = process.env.NODE_ENV === 'development'
+const dev = process.env.NODE_ENV === 'development'
 
 if (dev) {
-  var compiler = webpack(config)
+  const compiler = webpack(config)
+
+  app.use(history())
 
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -19,10 +22,6 @@ if (dev) {
   }))
 
   app.use(require('webpack-hot-middleware')(compiler))
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../index.html'))
-  })
 }
 
 else {
