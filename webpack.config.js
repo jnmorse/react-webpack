@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const path = require('path')
 require('dotenv').config()
+
 const TARGET = process.env.npm_lifecycle_event
 process.env.BABEL_ENV = TARGET
 
@@ -39,7 +40,7 @@ const CONFIG = {
       },
 
       {
-        test: /\.scss|\.sass$/,
+        test: /\.(scss|sass)$/,
         exclude: /node_modules/,
         loaders: [
           'style',
