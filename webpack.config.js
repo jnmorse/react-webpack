@@ -1,24 +1,30 @@
-var webpack = require('webpack')
-var path = require('path')
-
-// PostCSS
-var autoprefixer = require('autoprefixer')
-
-var htmlWebpackPlugin = require('html-webpack-plugin')
-
+'use strict'
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const path = require('path')
 require('dotenv').config()
 
-module.exports = {
+const TARGET = process.env.npm_lifecycle_event
+process.env.BABEL_ENV = TARGET
+
+// Extract sass files to css files
+var extractTextPlugin = require('extract-text-webpack-plugin')
+var extractSass = new extractTextPlugin('css/[name].css')
+
+// PostCSS
+const autoprefixer = require('autoprefixer')
+
+const htmlWebpackPlugin = require('html-webpack-plugin')
+
+const CONFIG = {
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.scss']
+  },
   entry: {
     main: [
-      'webpack-hot-middleware/client?path=/__webpack_hmr',
       path.resolve(__dirname, 'src/client'),
       path.resolve(__dirname, 'src/styles')
     ]
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: 'public'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -30,14 +36,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/, /server/, /test/],
-        loader: 'babel',
-        query: {
-          presets: [process.env.NODE_ENV === 'development' && 'react-hmre']
-        }
+        loader: 'babel'
       },
 
       {
-        test: /\.scss|\.sass$/,
+        test: /\.(scss|sass)$/,
         exclude: /node_modules/,
         loaders: [
           'style',
@@ -69,12 +72,7 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['', '.js', '.jsx', '.scss']
-  },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, 'bower_components')]
-  },
+  sassLoader: {},
   postcss: function() {
     return [
       autoprefixer({ browsers: ['last 2 versions'] })
@@ -87,10 +85,54 @@ module.exports = {
       title: 'React Webpack',
       template: './src/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
+}
+
+if (TARGET === 'serve' || !TARGET) {
+  module.exports = merge(CONFIG, {
+    entry: {
+      main: [
+        'webpack-hot-middleware/client?path=/__webpack_hmr',
+        path.resolve(__dirname, 'src/client'),
+        path.resolve(__dirname, 'src/styles')
+      ]
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+      contentBase: 'public'
+    },
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+    ]
+  })
+}
+
+else if (TARGET === 'build') {
+  CONFIG.module.loaders[1] = {
+    test: /\.(sass|scss)$/,
+    exclude: /node_modules/,
+    loader: extractSass.extract([
+      'css',
+      'postcss',
+      'sass'
+    ])
+  }
+
+  module.exports = merge(CONFIG, {
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }),
+      extractSass,
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
+    ]
+  })
 }
