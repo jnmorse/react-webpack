@@ -1,10 +1,5 @@
 const path = require('path')
 const express = require('express')
-const webpack = require('webpack')
-const config = require('../webpack.config')
-const history = require('connect-history-api-fallback')
-
-require('dotenv').config()
 
 const app = express()
 app.disable('x-powered-by')
@@ -12,7 +7,12 @@ app.disable('x-powered-by')
 const dev = process.env.NODE_ENV === 'development'
 
 if (dev) {
+  const webpack = require('webpack')
+  const config = require('../webpack.config')
   const compiler = webpack(config)
+  const history = require('connect-history-api-fallback')
+
+  require('dotenv').config()
 
   app.use(history())
 
