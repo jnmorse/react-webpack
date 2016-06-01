@@ -1,0 +1,98 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-trailing-spaces": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/forbid-prop-types": "error",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "react/jsx-equals-spacing": [
+      "error",
+      "never"
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
+    "react/jsx-key": "error",
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true,
+        "ignoreRefs": true
+      }
+    ],
+    "react/jsx-no-literals": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-space-before-closing": [
+      "error",
+      "always"
+    ],
+    "react/no-multi-comp": [
+      "error",
+      {
+        "ignoreStateless": true
+      }
+    ],
+    "react/no-string-refs": "error",
+    "react/no-unknown-property": "error",
+    "react/prefer-es6-class": [
+      "error",
+      "always"
+    ],
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [
+          "style",
+          "className"
+        ]
+      }
+    ],
+    "react/require-render-return": "error",
+    "react/self-closing-comp": "error",
+    "react/wrap-multilines": "error",
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}
