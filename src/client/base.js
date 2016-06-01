@@ -1,30 +1,25 @@
-import React, { Component } from 'react'
-import { siteLoaded } from './actions'
-import { connect } from 'react-redux'
-import { Header } from './components/Header'
+import React from 'react'
 
-class Base extends Component {
-  componentDidMount() {
-    this.props.siteLoaded()
-  }
-
-  render() {
-    return (
-      <div className='base-component'>
-        <Header className='container-fluid' subtitle='Webpack' title='React'/>
-        <p>
+const Base = () => (
+  <div className='base-component container-fluid'>
+    <header className='row'>
+      <div className='col-xs-12'>
+        <h1>
+          <span>JNMorse </span>
           <i className='glyphicon glyphicon-road' />
-          Time to write some code, and chew bubblegum. Only I'm all out of gum.
-        </p>
+          <span> React Webpack</span>
+        </h1>
       </div>
-    )
-  }
-}
+    </header>
 
-Base.propTypes = {
-  siteLoaded: React.PropTypes.func
-}
+    <div className='row'>
+      <p>
 
-Base.displayName = 'Base'
+        { 'Time to write some code, and chew bubblegum. '
+        + 'Only I\'m all out of gum.' }
+      </p>
+    </div>
+  </div>
+)
 
-export default connect(null, { siteLoaded })(Base)
+export default Base
