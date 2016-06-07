@@ -29,6 +29,7 @@ Linux / Mac OS
 
 ```sh
 git clone https://github.com/jnmorse/react-webpack.git
+cd react-webpack
 npm install
 cp sample.env .env
 npm run serve
@@ -72,4 +73,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-[1]: CONTRIBUTING.md (Contributing)
+[1]: .github/CONTRIBUTING.md (Contributing)
