@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": [
     "eslint:recommended",
@@ -20,6 +21,7 @@
     "react"
   ],
   "rules": {
+    "arrow-parens": ["error", "as-needed"],
     "indent": [
       "error",
       2
@@ -37,7 +39,7 @@
     "react/jsx-closing-bracket-location": "error",
     "react/jsx-curly-spacing": [
       "error",
-      "always"
+      "never"
     ],
     "react/jsx-equals-spacing": [
       "error",
