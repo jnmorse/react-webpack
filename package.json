@@ -21,14 +21,15 @@
   "main": "server/index.js",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "prebuild": "npm run lint",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "lint": "eslint .",
     "serve": "nodemon index.js",
+    "start": "node index.js",
     "pretest": "npm run build",
     "test": "cross-env NODE_ENV=test mocha",
     "pretest:cov": "npm run build",
-    "test:cov": "cross-env NODE_ENV=test babel-node ./node_modules/isparta/bin/isparta cover ./node_modules/mocha/bin/_mocha -- -R dot",
-    "prebuild": "eslint ./src",
-    "build": "cross-env NODE_ENV=production webpack -p"
+    "test:cov": "cross-env NODE_ENV=test babel-node ./node_modules/isparta/bin/isparta cover ./node_modules/mocha/bin/_mocha -- -R dot"
   },
   "repository": {
     "type": "git",
