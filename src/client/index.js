@@ -1,13 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import Base from './base'
-import configureStore from './configure-store'
 
-const store = configureStore()
+import App from './App'
 
 ReactDOM.render(
-  <Provider store={ store }>
-    <Base />
-  </Provider>
-  , document.querySelector('#app'))
+  <App />
+  , document.querySelector('#app')
+)

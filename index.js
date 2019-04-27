@@ -1,15 +1,14 @@
 require('dotenv').config()
 
-var app = require('./server')
-var port = process.env.PORT || 3000
-var stdout = process.stdout
+const app = require('./server')
 
-app.listen(port, function(error) {
+const port = process.env.PORT || 3000
+const { stdout } = process
+
+app.listen(port, (error) => {
   if (error) {
-    stdout.write('Error: ' + error + '\n\n')
-  }
-
-  else {
-    stdout.write('Listen on port ' + port + '\n\n')
+    stdout.write(`Error: ${error}\n\n`)
+  } else {
+    stdout.write(`Listen on port ${port}\n\n`)
   }
 })

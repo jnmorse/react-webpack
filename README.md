@@ -49,7 +49,7 @@ npm run build
 
 Read our [Contributing Guide][1]
 
-## [License](LICENSE)
+## [License](LICENSE.md)
 
 > The MIT License (MIT)
 

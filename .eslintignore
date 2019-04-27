@@ -1,2 +1,3 @@
-public/js/main.js
+public/js
+node_modules
 bower_components
