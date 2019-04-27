@@ -28,11 +28,10 @@ You will need to have Node.js installed.
 Linux / Mac OS
 
 ```sh
-git clone https://github.com/jnmorse/react-webpack.git
+git clone https://github.com/jnmorse/react-webpack.git project-folder --depth 1
 cd react-webpack
 npm install
-cp sample.env .env
-npm run serve
+npm run dev
 ```
 
 You may also download a zipped version of the repository and extract it.
