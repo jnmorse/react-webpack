@@ -55,7 +55,7 @@ npm run build
 
 Read our [Contributing Guide](.github/CONTRIBUTING.md)
 
-Submit a [Feature Request](https://github.com/jnmorse/react-webpack/issues/new?template=feature_request.md)
+Submit a [Feature Request](https://github.com/jnmorse/react-webpack/issues/new?template=feature-request.md)
 
 ## Author
 
