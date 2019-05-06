@@ -11,21 +11,28 @@ improve as I get more accustomed to work with these tools.
 
 Any contributions will be welcome.
 
-## Author
-
-Joseph Morse <mailto:tamed.lionheart@gmail.com>
-
 ## How To Get Started
 
 Follow these directions to get started.
 
-### Prerequisites
+## Prerequisites
 
-You will need to have Node.js installed.
+- Node version > 10.5
 
-### Installing Locally
+## Installing Locally
 
-Linux / Mac OS
+*Using Degit*
+___
+
+```sh
+npx degit jnmorse/react-webpack project-name
+cd project-name
+npm install
+npm run dev
+```
+
+*Git*
+___
 
 ```sh
 git clone https://github.com/jnmorse/react-webpack.git project-folder --depth 1
@@ -36,7 +43,7 @@ npm run dev
 
 You may also download a zipped version of the repository and extract it.
 
-### Build For Production
+## Build For Production
 
 To use in production change NODE_ENV in the `.env` file to production.
 
@@ -46,30 +53,18 @@ npm run build
 
 ## Want to Contribute?
 
-Read our [Contributing Guide][1]
+Read our [Contributing Guide](.github/CONTRIBUTING.md)
+
+Submit a [Feature Request](https://github.com/jnmorse/react-webpack/issues/new?template=feature_request.md)
+
+## Author
+
+Joseph Morse <tamed.lionheart@gmail.com> - [jnmorse](https://github.com/jnmorse)
 
 ## [License](LICENSE.md)
 
-> The MIT License (MIT)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-> Copyright (c) 2016 Joseph Morse <tamed.lionheart@gmail.com>
+## Acknowledgements
 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-> The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-[1]: .github/CONTRIBUTING.md (Contributing)
+* [FreeCodeCamp](https://freecodecamp.org/) for getting me started on React
