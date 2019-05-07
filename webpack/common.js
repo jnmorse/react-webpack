@@ -2,11 +2,11 @@ const { join } = require('path')
 const Webpackbar = require('webpackbar')
 const config = require('../package.json')
 
-const exp = /https?:\/\/\S+(?<publicPath>\/\S+)/u
+const exp = /https?:\/\/\S+(\/\S+)/u
 
 const result = exp.exec(config.homepage)
 
-const { publicPath } = result
+const [, publicPath] = result
 
 module.exports = {
   output: {
