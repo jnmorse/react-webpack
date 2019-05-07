@@ -1,0 +1,26 @@
+:root {
+  --white: hsl(0, 0%, 97%);
+  --black: hsl(0, 0%, 5%);
+  font-family: Roboto, sans-serif;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(14px + 0.5vw);
+  min-height: 100vh;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+:global .fas {
+  font-size: 2em;
+}
+

@@ -1,6 +1,5 @@
 const merge = require('webpack-merge')
 const common = require('../common')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(common, {
@@ -14,35 +13,6 @@ module.exports = merge(common, {
 
   module: {
     rules: [
-      {
-        test: /\.scss$/u,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
-      },
 
       {
         test: /.*\.gif|png|jpe?g|svg$/iu,
@@ -85,8 +55,8 @@ module.exports = merge(common, {
       hash: true,
       inject: true,
       title: 'React Webpack',
-      template: './src/index.html'
-    }),
-    new MiniCssExtractPlugin({ filename: '[name].css', chunkFilename: '[id].css' })
+      template: './src/index.html',
+      favicon: './src/assets/images/icon.png'
+    })
   ]
 })

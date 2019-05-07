@@ -5,6 +5,9 @@
   "extends": [
     "jnmorse"
   ],
+  "parserOptions": {
+    "ecmaVersion": 9
+  },
   "rules": {
     "function-paren-newline": ["error", "consistent"],
     "import/no-extraneous-dependencies": "off"

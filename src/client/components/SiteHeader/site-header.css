@@ -1,0 +1,21 @@
+.root {
+  margin-bottom: 1.5em;
+}
+
+.root h1 {
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+}
+
+.root h1, p {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.root p {
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.3em;
+}
