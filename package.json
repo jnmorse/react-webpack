@@ -55,7 +55,7 @@
     "@babel/register": "^7.4.4",
     "@hot-loader/react-dom": "^16.8.6",
     "autoprefixer": "^9.6.0",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.6",
     "bootstrap-sass": "^3.4.1",
     "chai": "^4.2.0",
     "connect-history-api-fallback": "^1.2.0",
