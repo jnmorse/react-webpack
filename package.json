@@ -34,7 +34,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "pretest": "npm run build",
-    "test": "mocha",
+    "test": "NODE_ENV=test mocha",
     "postinstall": "cp sample.env .env"
   },
   "dependencies": {
