@@ -4,12 +4,22 @@ const TerserJSPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const config = require('../../package.json')
 const common = require('./common')
+
+const exp = /https?:\/\/\S+(\/\S+)/u
+
+const result = exp.exec(config.homepage)
+
+const [, publicPath] = result
 
 module.exports = merge(common, {
   mode: 'production',
   entry: join(__dirname, '../../src/client/index'),
   devtool: 'source-map',
+  output: {
+    publicPath: publicPath || '/'
+  },
   module: {
     rules: [
       {

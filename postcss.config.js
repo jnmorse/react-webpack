@@ -4,7 +4,7 @@ const fontMagician = require('postcss-font-magician')
 module.exports = {
   plugins: [
     fontMagician({
-      protocol: 'http:'
+      protocol: 'https:'
     }),
     autoprefixer
   ]

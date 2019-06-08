@@ -5,6 +5,9 @@ const webpack = require('webpack')
 
 module.exports = merge(common, {
   mode: 'development',
+  output: {
+    publicPath: '/'
+  },
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'

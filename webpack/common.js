@@ -1,17 +1,9 @@
 const { join } = require('path')
 const Webpackbar = require('webpackbar')
-const config = require('../package.json')
-
-const exp = /https?:\/\/\S+(\/\S+)/u
-
-const result = exp.exec(config.homepage)
-
-const [, publicPath] = result
 
 module.exports = {
   output: {
-    path: join(__dirname, '../public'),
-    publicPath: publicPath || '/'
+    path: join(__dirname, '../public')
   },
 
   resolve: {
