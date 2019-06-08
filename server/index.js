@@ -17,16 +17,16 @@ if (dev) {
 
   const webpack = require('webpack')
 
-
   const compiler = webpack(config)
   app.use(history())
 
-  app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath
-  }))
+  app.use(
+    require('webpack-dev-middleware')(compiler, {
+      noInfo: true,
+      publicPath
+    })
+  )
   app.use(require('webpack-hot-middleware')(compiler))
-
 
   app.use(publicPath, express.static(path))
   /* eslint-enable global-require */

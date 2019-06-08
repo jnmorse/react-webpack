@@ -8,10 +8,7 @@ module.exports = {
 
   resolve: {
     extensions: ['.js'],
-    modules: [
-      join(__dirname, '../node_modules'),
-      join(__dirname, '../src')
-    ]
+    modules: [join(__dirname, '../node_modules'), join(__dirname, '../src')]
   },
 
   module: {
@@ -28,7 +25,5 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new Webpackbar()
-  ]
+  plugins: [new Webpackbar()]
 }

@@ -52,6 +52,9 @@ module.exports = merge(common, {
     minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].css', chunkFilename: '[id].css' })
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
   ]
 })

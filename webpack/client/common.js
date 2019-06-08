@@ -13,14 +13,13 @@ module.exports = merge(common, {
 
   module: {
     rules: [
-
       {
         test: /.*\.gif|png|jpe?g|svg$/iu,
         exclude: /node_modules/u,
         loaders: [
           'file-loader?hash=sha512&digest=hex&name=images/[name].[ext]',
-          'image-webpack?{progressive:true, optimizationLevel: 7, '
-            + 'interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
+          'image-webpack?{progressive:true, optimizationLevel: 7, ' +
+            'interlaced: false, pngquant:{quality: "65-90", speed: 4}}'
         ]
       },
 
