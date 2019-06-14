@@ -2,10 +2,12 @@
   --white: hsl(0, 0%, 97%);
   --black: hsl(0, 0%, 5%);
   font-family: Roboto, sans-serif;
-  font-size: 100%;
+  font-size: calc(14px + 0.3vw);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -19,8 +21,3 @@ body {
   background-color: var(--white);
   color: var(--black);
 }
-
-:global .fas {
-  font-size: 2em;
-}
-

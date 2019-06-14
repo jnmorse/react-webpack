@@ -5,17 +5,18 @@
 .root h1 {
   display: grid;
   place-items: center;
-  font-size: 1.5em;
+  font-size: 2rem;
   letter-spacing: 0.5em;
 }
 
-.root h1, p {
+.root h1,
+p {
   margin: 0;
   line-height: 1.5em;
 }
 
 .root p {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.5rem;
   letter-spacing: 0.3em;
 }
