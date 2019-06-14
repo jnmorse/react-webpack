@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/jnmorse/react-webpack/compare/v0.4.1...v0.5.0) (2019-06-14)
+
+
+### Bug Fixes
+
+* moved webpack-cli to dev dependencies ([581287a](https://github.com/jnmorse/react-webpack/commit/581287a))
+* removed webpack stats mentions ([6df0d89](https://github.com/jnmorse/react-webpack/commit/6df0d89))
+
+
+### Build System
+
+* updated build to function a bit better ([0ec220f](https://github.com/jnmorse/react-webpack/commit/0ec220f))
+
+
+### Features
+
+* added class properties ([ae85228](https://github.com/jnmorse/react-webpack/commit/ae85228))
+* added font magician ([2362e90](https://github.com/jnmorse/react-webpack/commit/2362e90))
+* added fontawesome component ([57ce954](https://github.com/jnmorse/react-webpack/commit/57ce954))
+
+
+### Tests
+
+* added NODE_ENV ([27d8fa3](https://github.com/jnmorse/react-webpack/commit/27d8fa3))
+* removed commented line ([dd494b4](https://github.com/jnmorse/react-webpack/commit/dd494b4))
+
+
+
 ### [0.4.1](https://github.com/jnmorse/react-webpack/compare/v0.4.0...v0.4.1) (2019-05-07)
 
 
