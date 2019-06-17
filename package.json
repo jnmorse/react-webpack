@@ -79,7 +79,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-font-magician": "^2.2.2",
     "postcss-loader": "^3.0.0",
-    "react-hot-loader": "^4.11.0",
+    "react-hot-loader": "^4.11.1",
     "stats-webpack-plugin": "^0.7.0",
     "style-loader": "^0.23.1",
     "supertest": "^4.0.2",
