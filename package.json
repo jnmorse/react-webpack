@@ -64,7 +64,7 @@
     "connect-history-api-fallback": "^1.2.0",
     "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
-    "eslint-config-jnmorse": "^2.4.0",
+    "eslint-config-jnmorse": "^2.4.1",
     "extract-loader": "^3.1.0",
     "file-loader": "^4.0.0",
     "html-loader": "^0.5.5",
