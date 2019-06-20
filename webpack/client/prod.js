@@ -3,9 +3,11 @@ const merge = require('webpack-merge')
 const TerserJSPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = require('../../package.json')
 const common = require('./common')
+const htmlWebpackPluginOptions = require('./html-webpack-plugin-options')
 
 const exp = /https?:\/\/\S+(\/\S+)/u
 
@@ -55,6 +57,7 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod)
   ]
 })

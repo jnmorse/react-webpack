@@ -1,6 +1,5 @@
 const merge = require('webpack-merge')
 const common = require('../common')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(common, {
   name: 'client',
@@ -49,13 +48,5 @@ module.exports = merge(common, {
     }
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      hash: true,
-      inject: true,
-      title: 'React Webpack',
-      template: './src/index.html',
-      favicon: './src/assets/images/icon.png'
-    })
-  ]
+  plugins: []
 })
