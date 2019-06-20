@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/jnmorse/react-webpack/compare/v0.5.0...v0.5.1) (2019-06-20)
+
+
+### Build System
+
+* **deps-dev:** bump eslint-config-jnmorse from 2.4.0 to 2.4.1 ([ac696b3](https://github.com/jnmorse/react-webpack/commit/ac696b3))
+* **deps-dev:** bump react-hot-loader from 4.11.0 to 4.11.1 ([cb7def7](https://github.com/jnmorse/react-webpack/commit/cb7def7))
+* added clean-webpack-plugin ([2988011](https://github.com/jnmorse/react-webpack/commit/2988011))
+* minify html better ([7bea37c](https://github.com/jnmorse/react-webpack/commit/7bea37c))
+
+
+
 ## [0.5.0](https://github.com/jnmorse/react-webpack/compare/v0.4.1...v0.5.0) (2019-06-14)
 
 
