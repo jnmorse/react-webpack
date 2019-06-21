@@ -14,7 +14,6 @@ module.exports = {
       removeAttributeQuotes: true,
       collapseWhitespace: true,
       removeComments: true
-
     }
   }
 }
