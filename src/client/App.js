@@ -1,17 +1,17 @@
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
-import { Provider } from 'react-redux'
+import React from 'react';
+import { hot } from 'react-hot-loader/root';
+import { Provider } from 'react-redux';
 
-import Layout from './components/Layout'
-import SiteHeader from './components/SiteHeader'
+import Layout from './components/Layout';
+import SiteHeader from './components/SiteHeader';
 
-import configureStore from './configure-store'
+import configureStore from './configure-store';
 
 /* eslint-disable */
 import '../styles/index.css'
 /* eslint-enable */
 
-const store = configureStore()
+const store = configureStore();
 
 const App = () => (
   <Provider store={store}>
@@ -27,6 +27,6 @@ const App = () => (
       </div>
     </Layout>
   </Provider>
-)
+);
 
-export default hot(App)
+export default hot(App);

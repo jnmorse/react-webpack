@@ -1,20 +1,20 @@
-const { join } = require('path')
-const merge = require('webpack-merge')
-const TerserJSPlugin = require('terser-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { join } = require('path');
+const merge = require('webpack-merge');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const config = require('../../package.json')
-const common = require('./common')
-const htmlWebpackPluginOptions = require('./html-webpack-plugin-options')
+const config = require('../../package.json');
+const common = require('./common');
+const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
-const exp = /https?:\/\/\S+(\/\S+)/u
+const exp = /https?:\/\/\S+(\/\S+)/u;
 
-const result = exp.exec(config.homepage)
+const result = exp.exec(config.homepage);
 
-const [, publicPath] = result
+const [, publicPath] = result;
 
 module.exports = merge(common, {
   mode: 'production',
@@ -62,4 +62,4 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
     new CleanWebpackPlugin()
   ]
-})
+});

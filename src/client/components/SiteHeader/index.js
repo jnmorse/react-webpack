@@ -1,8 +1,8 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRoad } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRoad } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './site-header.css'
+import styles from './site-header.css';
 
 const SiteHeader = () => (
   <header className={styles.root}>
@@ -16,6 +16,6 @@ const SiteHeader = () => (
 
     <p>by Joseph Morse</p>
   </header>
-)
+);
 
-export default SiteHeader
+export default SiteHeader;

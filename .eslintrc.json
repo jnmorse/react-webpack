@@ -8,8 +8,16 @@
   "parserOptions": {
     "ecmaVersion": 9
   },
-  "rules": {
-    "function-paren-newline": ["error", "consistent"],
-    "import/no-extraneous-dependencies": "off"
-  }
+  "rules": {},
+  "overrides": [
+    {
+      "files": [
+        "webpack/**/*.js",
+        "postcss.config.js"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }

@@ -4,7 +4,7 @@ const base = {
   title: 'React Webpack',
   template: './src/index.html',
   favicon: './src/assets/images/icon.png'
-}
+};
 
 module.exports = {
   dev: base,
@@ -16,4 +16,4 @@ module.exports = {
       removeComments: true
     }
   }
-}
+};

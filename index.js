@@ -1,14 +1,14 @@
-require('dotenv').config()
+require('dotenv').config();
 
-const app = require('./server')
+const app = require('./server');
 
-const port = process.env.PORT || 3000
-const { stdout } = process
+const port = process.env.PORT || 3000;
+const { stdout } = process;
 
 app.listen(port, error => {
   if (error) {
-    stdout.write(`Error: ${error}\n\n`)
+    stdout.write(`Error: ${error}\n\n`);
   } else {
-    stdout.write(`Listen on port ${port}\n\n`)
+    stdout.write(`Listen on port ${port}\n\n`);
   }
-})
+});

@@ -1,9 +1,9 @@
-const { join } = require('path')
-const merge = require('webpack-merge')
-const common = require('./common')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const htmlWebpackPluginOptions = require('./html-webpack-plugin-options')
+const { join } = require('path');
+const merge = require('webpack-merge');
+const common = require('./common');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -54,4 +54,4 @@ module.exports = merge(common, {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.dev)
   ]
-})
+});

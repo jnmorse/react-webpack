@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 const Layout = ({ children, title }) => {
-  const showTitle = title ? `${title} - React Webpack` : 'React Webpack'
+  const showTitle = title ? `${title} - React Webpack` : 'React Webpack';
 
   return (
     <>
@@ -13,16 +13,16 @@ const Layout = ({ children, title }) => {
 
       {children}
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string
-}
+};
 
 Layout.defaultProps = {
   title: ''
-}
+};
 
-export default Layout
+export default Layout;

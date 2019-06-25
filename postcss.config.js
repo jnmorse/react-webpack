@@ -1,5 +1,5 @@
-const autoprefixer = require('autoprefixer')
-const fontMagician = require('postcss-font-magician')
+const autoprefixer = require('autoprefixer');
+const fontMagician = require('postcss-font-magician');
 
 module.exports = {
   plugins: [
@@ -8,4 +8,4 @@ module.exports = {
     }),
     autoprefixer
   ]
-}
+};

@@ -1,5 +1,5 @@
-const { join } = require('path')
-const Webpackbar = require('webpackbar')
+const { join } = require('path');
+const Webpackbar = require('webpackbar');
 
 module.exports = {
   output: {
@@ -26,4 +26,4 @@ module.exports = {
   },
 
   plugins: [new Webpackbar()]
-}
+};
