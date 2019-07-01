@@ -8,7 +8,7 @@ import SiteHeader from './components/SiteHeader';
 import configureStore from './configure-store';
 
 /* eslint-disable */
-import '../styles/index.css'
+import '../styles/index.css';
 /* eslint-enable */
 
 const store = configureStore();
