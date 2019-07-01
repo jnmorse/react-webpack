@@ -78,7 +78,7 @@
     "mocha": "^6.1.4",
     "mocha-jsdom": "^2.0.0",
     "nodemon": "^1.19.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-font-magician": "^2.2.2",
     "postcss-loader": "^3.0.0",
     "stats-webpack-plugin": "^0.7.0",
