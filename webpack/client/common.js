@@ -6,8 +6,8 @@ module.exports = merge(common, {
   target: 'web',
 
   output: {
-    filename: 'js/[name].js',
-    chunkFilename: 'js/[name].chunk.js'
+    filename: 'js/[name].[contenthash:8].js',
+    chunkFilename: 'js/[name].[contenthash:8].js'
   },
 
   module: {
@@ -48,5 +48,15 @@ module.exports = merge(common, {
     }
   },
 
-  plugins: []
+  plugins: [],
+  node: {
+    module: 'empty',
+    dgram: 'empty',
+    dns: 'mock',
+    fs: 'empty',
+    http2: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty'
+  }
 });

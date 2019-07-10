@@ -20,19 +20,20 @@ module.exports = merge(common, {
   mode: 'production',
   entry: join(__dirname, '../../src/client/index'),
   devtool: 'source-map',
+
   output: {
+    filename: 'js/[name].[contenthash:8].js',
+    chunkFilename: 'js/[name].[contenthash:8].js',
     publicPath: publicPath || '/'
   },
+
   module: {
     rules: [
       {
         test: /\.css$/u,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              sourceMap: true
-            }
+            loader: MiniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
@@ -51,13 +52,44 @@ module.exports = merge(common, {
       }
     ]
   },
+  // browed some things from create-react-app
   optimization: {
-    minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()]
+    minimize: true,
+    minimizer: [
+      new TerserJSPlugin({
+        terserOptions: {
+          parse: {
+            ecma: 8
+          },
+          compress: {
+            ecma: 5,
+            warnings: false,
+            comparisons: false,
+            inline: 2
+          },
+          mangle: {
+            safari10: true
+          },
+          output: {
+            ecma: 5,
+            comments: false,
+            ascii_only: true
+          }
+        },
+        cache: true,
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin()
+    ],
+    splitChunks: {
+      chunks: 'all',
+      name: false
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].chunk.css'
     }),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
     new CleanWebpackPlugin()

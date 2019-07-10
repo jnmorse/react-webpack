@@ -7,9 +7,13 @@ const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
 module.exports = merge(common, {
   mode: 'development',
+
   output: {
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[name].chunk.js',
     publicPath: '/'
   },
+
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom'
