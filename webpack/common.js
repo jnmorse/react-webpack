@@ -7,14 +7,14 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx'],
     modules: [join(__dirname, '../node_modules'), join(__dirname, '../src')]
   },
 
   module: {
     rules: [
       {
-        test: /\.js$/u,
+        test: /\.jsx?$/u,
         exclude: /node_modules/u,
         use: [
           {
