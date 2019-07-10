@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Provider } from 'react-redux';
 
 import Layout from './components/Layout';
@@ -13,7 +12,7 @@ import '../styles/index.css';
 
 const store = configureStore();
 
-const App = () => (
+export const App = () => (
   <Provider store={store}>
     <Layout>
       <SiteHeader />
@@ -28,5 +27,3 @@ const App = () => (
     </Layout>
   </Provider>
 );
-
-export default hot(App);
