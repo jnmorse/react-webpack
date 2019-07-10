@@ -2,7 +2,7 @@ const base = {
   hash: true,
   inject: true,
   title: 'React Webpack',
-  template: './src/index.html',
+  template: './template.html',
   favicon: './src/assets/images/icon.png'
 };
 
