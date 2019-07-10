@@ -31,7 +31,6 @@
   "scripts": {
     "build": "webpack --config ./webpack/client/prod.js",
     "dev": "nodemon index.js",
-    "postinstall": "cp sample.env .env",
     "lint": "eslint .",
     "start": "node index.js",
     "pretest": "npm run build",

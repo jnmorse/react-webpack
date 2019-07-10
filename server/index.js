@@ -9,7 +9,7 @@ const { publicPath, path } = config.output;
 const app = express();
 app.disable('x-powered-by');
 
-const dev = process.env.NODE_ENV === 'development';
+const dev = process.env.NODE_ENV === 'development' || true;
 
 if (dev) {
   /* eslint-disable global-require */
