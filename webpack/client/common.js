@@ -1,14 +1,12 @@
 const merge = require('webpack-merge');
+const { join } = require('path');
 const common = require('../common');
 
 module.exports = merge(common, {
   name: 'client',
   target: 'web',
 
-  output: {
-    filename: 'js/[name].[contenthash:8].js',
-    chunkFilename: 'js/[name].[contenthash:8].js'
-  },
+  entry: [join(__dirname, '../../src/index')],
 
   module: {
     rules: [

@@ -1,4 +1,3 @@
-const { join } = require('path');
 const merge = require('webpack-merge');
 const common = require('./common');
 const webpack = require('webpack');
@@ -7,6 +6,8 @@ const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
 module.exports = merge(common, {
   mode: 'development',
+
+  entry: ['webpack-hot-middleware/client'],
 
   output: {
     filename: 'js/[name].js',
@@ -19,12 +20,10 @@ module.exports = merge(common, {
       'react-dom': '@hot-loader/react-dom'
     }
   },
-  entry: [
-    'webpack-hot-middleware/client',
-    join(__dirname, '../../src/client/index')
-  ],
+
   stats: 'minimal',
   devtool: 'cheap-module-eval-source-map',
+
   module: {
     rules: [
       {
