@@ -62,6 +62,7 @@
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "connect-history-api-fallback": "^1.2.0",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
     "eslint": "^6.0.1",
     "eslint-config-jnmorse": "^2.5.0",

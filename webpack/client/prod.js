@@ -20,8 +20,8 @@ module.exports = merge(common, {
   devtool: 'source-map',
 
   output: {
-    filename: 'js/[name].[contenthash:8].js',
-    chunkFilename: 'js/[name].[contenthash:8].js',
+    filename: 'static/js/[name].[contenthash:8].js',
+    chunkFilename: 'static/js/[name].[contenthash:8].js',
     publicPath: publicPath || '/'
   },
 
@@ -86,8 +86,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].chunk.css'
+      filename: 'static/css/[name].[contenthash:8].css',
+      chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
     }),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
     new CleanWebpackPlugin()

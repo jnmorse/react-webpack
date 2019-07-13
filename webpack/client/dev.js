@@ -10,8 +10,8 @@ module.exports = merge(common, {
   entry: ['webpack-hot-middleware/client'],
 
   output: {
-    filename: 'js/[name].js',
-    chunkFilename: 'js/[name].chunk.js',
+    filename: 'static/js/[name].js',
+    chunkFilename: 'static/js/[name].chunk.js',
     publicPath: '/'
   },
 
