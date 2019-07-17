@@ -70,7 +70,7 @@
     "image-webpack-loader": "^5.0.0",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
-    "mini-css-extract-plugin": "^0.7.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.1.4",
     "mocha-jsdom": "^2.0.0",
     "nodemon": "^1.19.1",
