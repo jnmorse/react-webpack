@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/jnmorse/react-webpack/compare/v0.5.1...v0.6.0) (2019-07-21)
+
+
+### Bug Fixes
+
+* **app:** removed redux from being included ([ae85818](https://github.com/jnmorse/react-webpack/commit/ae85818))
+* **build:** added jsx extention. ([2a0dfa7](https://github.com/jnmorse/react-webpack/commit/2a0dfa7))
+
+
+### Build System
+
+* **deps:** [security] bump lodash from 4.17.11 to 4.17.15 ([0509ed1](https://github.com/jnmorse/react-webpack/commit/0509ed1))
+* **deps:** updated dependancies ([1b93d25](https://github.com/jnmorse/react-webpack/commit/1b93d25))
+* **deps:** updated packages ([e928d0a](https://github.com/jnmorse/react-webpack/commit/e928d0a))
+* **deps:** updated some packages ([3542fd0](https://github.com/jnmorse/react-webpack/commit/3542fd0))
+* **deps:** updated to latest versions ([767eefa](https://github.com/jnmorse/react-webpack/commit/767eefa))
+* borrowed some things from react-scripts ([0f1aec1](https://github.com/jnmorse/react-webpack/commit/0f1aec1))
+* changed output to build ([71c952c](https://github.com/jnmorse/react-webpack/commit/71c952c))
+* remove implict need for .env file ([da809e3](https://github.com/jnmorse/react-webpack/commit/da809e3))
+* **deps-dev:** added @babel/plugin-syntax-dynamic-import ([b811d01](https://github.com/jnmorse/react-webpack/commit/b811d01))
+* **deps-dev:** updated react-hot-loader ([6c71725](https://github.com/jnmorse/react-webpack/commit/6c71725))
+* **development:** removed express and middleware ([404d219](https://github.com/jnmorse/react-webpack/commit/404d219))
+
+
+### BREAKING CHANGES
+
+* **development:** removed express and middleware and mocha tests. Will now be just using
+webpack-dev-server for dev process.
+
+
+
 ### [0.5.1](https://github.com/jnmorse/react-webpack/compare/v0.5.0...v0.5.1) (2019-06-20)
 
 
