@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const InterpolateHTMLPlugin = require('interpolate-html-plugin');
+const path = require('path');
 
 const config = require('../../package.json');
 const common = require('./common');
@@ -38,7 +39,11 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+                context: path.resolve(__dirname, '../../src')
+              }
             }
           },
           {
