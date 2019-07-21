@@ -4,6 +4,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const InterpolateHTMLPlugin = require('interpolate-html-plugin');
 
 const config = require('../../package.json');
 const common = require('./common');
@@ -90,6 +91,9 @@ module.exports = merge(common, {
       chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
     }),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
+    new InterpolateHTMLPlugin({
+      PUBLIC_URL: '/react-webpack'
+    }),
     new CleanWebpackPlugin()
   ]
 });

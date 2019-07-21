@@ -2,12 +2,12 @@ const merge = require('webpack-merge');
 const common = require('./common');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const InterpolateHTMLPlugin = require('interpolate-html-plugin');
 const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
+const path = require('path');
 
 module.exports = merge(common, {
   mode: 'development',
-
-  entry: ['webpack-hot-middleware/client'],
 
   output: {
     filename: 'static/js/[name].js',
@@ -39,7 +39,11 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+                context: path.resolve(__dirname, '../../src')
+              }
             }
           },
           {
@@ -55,6 +59,9 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new HtmlWebpackPlugin(htmlWebpackPluginOptions.dev)
+    new HtmlWebpackPlugin(htmlWebpackPluginOptions.dev),
+    new InterpolateHTMLPlugin({
+      PUBLIC_URL: ''
+    })
   ]
 });
