@@ -35,7 +35,7 @@
     "start": "npm run --silent dev"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "dotenv": "^8.1.0",
