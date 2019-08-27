@@ -43,7 +43,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-hot-loader": "^4.12.11"
+    "react-hot-loader": "^4.12.12"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
