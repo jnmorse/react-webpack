@@ -9,3 +9,7 @@ import './index.css';
 const HotApp = hot(App);
 
 ReactDOM.render(<HotApp />, document.querySelector('#app'));
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}

@@ -1,5 +1,5 @@
 const base = {
-  hash: true,
+  hash: false,
   inject: true,
   title: 'React Webpack',
   template: './public/index.html',

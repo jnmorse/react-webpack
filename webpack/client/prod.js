@@ -6,25 +6,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const InterpolateHTMLPlugin = require('interpolate-html-plugin');
 const path = require('path');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 const config = require('../../package.json');
 const common = require('./common');
 const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
-const exp = /https?:\/\/\S+(\/\S+)/u;
-
-const result = exp.exec(config.homepage);
-
-const [, publicPath] = result;
+const url = new URL(config.homepage) || '';
 
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
 
   output: {
-    filename: 'static/js/[name].[contenthash:8].js',
-    chunkFilename: 'static/js/[name].[contenthash:8].js',
-    publicPath: publicPath || '/'
+    filename: 'static/js/[name].js',
+    chunkFilename: 'static/js/[name].chunk.js',
+    publicPath: `${url.pathname}/`
   },
 
   module: {
@@ -91,14 +88,18 @@ module.exports = merge(common, {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'static/css/[name].[contenthash:8].css',
       chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
     }),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
     new InterpolateHTMLPlugin({
-      PUBLIC_URL: '/react-webpack'
+      PUBLIC_URL: url.pathname
     }),
-    new CleanWebpackPlugin()
+    new InjectManifest({
+      swSrc: 'src/service-worker.js',
+      importWorkboxFrom: 'cdn'
+    })
   ]
 });
