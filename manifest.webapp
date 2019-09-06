@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "React Webpack",
+  "description": null,
+  "icons": {
+    "60": "/react-webpack/firefox_app_60x60.png",
+    "128": "/react-webpack/firefox_app_128x128.png",
+    "512": "/react-webpack/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Joseph Morse",
+    "url": "https://github.com/jnmorse"
+  }
+}

@@ -1,21 +1,59 @@
 {
+  "name": "React Webpack",
   "short_name": "React Webpack",
-  "name": "React Webpack Setup",
+  "description": null,
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/react-webpack",
+  "background_color": "#f7f7f7",
+  "theme_color": "#000",
   "icons": [
     {
-      "src": "icon.png",
-      "sizes": "192x192 144x144 64x64 32x32 24x24 16x16",
+      "src": "/react-webpack/android-chrome-36x36.png",
+      "sizes": "36x36",
       "type": "image/png"
     },
     {
-      "src": "images/banner.png",
-      "sizes": "1280x640",
+      "src": "/react-webpack/android-chrome-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/react-webpack/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "/react-webpack/index.html",
-  "scope": "/",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF"
+  ]
 }
