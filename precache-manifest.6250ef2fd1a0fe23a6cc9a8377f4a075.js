@@ -1,19 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82ec95d8ffc0a68192688d2c788e32b3",
+    "revision": "9d6f44c59169f5412864a22a5e92032b",
     "url": "/react-webpack/icon.png"
   },
   {
-    "revision": "28d1a83466a019b37f762b9a7a1e59c8",
+    "revision": "b234b9c515f67875420206391785c4ce",
     "url": "/react-webpack/index.html"
   },
   {
-    "revision": "bbb64c01f319957c102296bfaf540830",
+    "revision": "f045936705861434305aaa6363cdf32c",
     "url": "/react-webpack/manifest.json"
   },
   {
     "revision": "fb017601ef93596bc6d3",
     "url": "/react-webpack/static/css/main.413545f7.css"
+  },
+  {
+    "revision": "6d73820d9f2245198357e4776af9e91a",
+    "url": "/react-webpack/static/images/banner.png"
   },
   {
     "revision": "fb017601ef93596bc6d3",

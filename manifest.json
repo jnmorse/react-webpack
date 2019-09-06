@@ -4,13 +4,18 @@
   "icons": [
     {
       "src": "icon.png",
-      "sizes": "144x144 64x64 32x32 24x24 16x16",
+      "sizes": "192x192 144x144 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "images/banner.png",
+      "sizes": "1280x640",
       "type": "image/png"
     }
   ],
   "start_url": "/react-webpack/index.html",
   "scope": "/",
   "display": "standalone",
-  "theme-color": "#000000",
-  "background-color": "#FFFFFF"
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF"
 }
