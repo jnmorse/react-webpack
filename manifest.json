@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/react-webpack/index.html",
   "scope": "/",
   "display": "standalone",
   "theme-color": "#000000",
