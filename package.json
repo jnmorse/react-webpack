@@ -16,7 +16,7 @@
     "sass",
     "webpack"
   ],
-  "homepage": "https://jnmorse.github.io/react-webpack",
+  "homepage": "https://react-webpack-c794b.firebaseapp.com/",
   "bugs": {
     "url": "https://github.com/jnmorse/react-webpack/issues",
     "email": "tamed.lionheart@gmail.com"
@@ -61,6 +61,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^6.3.0",
     "eslint-config-jnmorse": "^2.6.1",
+    "express": "^4.17.1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",

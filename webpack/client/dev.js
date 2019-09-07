@@ -3,8 +3,10 @@ const common = require('./common');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InterpolateHTMLPlugin = require('interpolate-html-plugin');
-const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
+const { InjectManifest } = require('workbox-webpack-plugin');
 const path = require('path');
+
+const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -59,6 +61,10 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.dev),
     new InterpolateHTMLPlugin({
       PUBLIC_URL: ''
+    }),
+    new InjectManifest({
+      swSrc: 'src/service-worker.js',
+      importWorkboxFrom: 'cdn'
     })
   ]
 });

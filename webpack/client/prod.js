@@ -13,6 +13,7 @@ const common = require('./common');
 const htmlWebpackPluginOptions = require('./html-webpack-plugin-options');
 
 const url = new URL(config.homepage) || '';
+console.log(url.pathname);
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,7 +22,7 @@ module.exports = merge(common, {
   output: {
     filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[name].chunk.js',
-    publicPath: `${url.pathname}/`
+    publicPath: url ? url.pathname : '/'
   },
 
   module: {
@@ -95,7 +96,7 @@ module.exports = merge(common, {
     }),
     new HtmlWebpackPlugin(htmlWebpackPluginOptions.prod),
     new InterpolateHTMLPlugin({
-      PUBLIC_URL: url.pathname
+      PUBLIC_URL: url && url.pathname.length > 1 ? `${url.pathname}/` : ''
     }),
     new InjectManifest({
       swSrc: 'src/service-worker.js',

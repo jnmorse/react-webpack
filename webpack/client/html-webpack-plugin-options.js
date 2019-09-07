@@ -3,7 +3,7 @@ const base = {
   inject: true,
   title: 'React Webpack',
   template: './public/index.html',
-  favicon: './src/assets/images/icon.png'
+  favicon: './public/favicon.ico'
 };
 
 module.exports = {
