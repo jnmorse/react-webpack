@@ -1,4 +1,4 @@
-importScripts("/react-webpack/precache-manifest.13ea8ca54686a56bfada9c76b31e7b70.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/react-webpack/precache-manifest.18afb3fdd8ddd5a4821e99fbc698b57e.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 /* globals workbox */
 workbox.core.skipWaiting();

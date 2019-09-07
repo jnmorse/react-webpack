@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-webpack/index.html"
   },
   {
-    "revision": "4b08b5ea647464b940caf45eefc5ccad",
+    "revision": "2b038e53042b53ef4e6bef1a2faaef09",
     "url": "/react-webpack/manifest.json"
   },
   {
