@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-webpack/manifest.json"
   },
   {
-    "revision": "22f03d2a6b2ce2278ffd",
+    "revision": "2a78c4398fd2c5fa6264",
     "url": "/react-webpack/static/css/main.413545f7.css"
   },
   {
@@ -80,7 +80,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-webpack/static/images/icons/apple-icon-76x76.png"
   },
   {
-    "revision": "22f03d2a6b2ce2278ffd",
+    "revision": "2a78c4398fd2c5fa6264",
     "url": "/react-webpack/static/js/main.js"
   },
   {
