@@ -59,7 +59,7 @@
     "connect-history-api-fallback": "^1.2.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.0",
     "eslint-config-jnmorse": "^2.6.1",
     "express": "^4.17.1",
     "file-loader": "^4.2.0",
